@@ -1,0 +1,206 @@
+body {
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    font-family: "Exo", sans-serif;
+    margin: 0;
+}
+
+p {
+    margin: 1rem;
+}
+
+h1 {
+    font-family: "Bangers", system-ui;
+    font-size: 4rem;
+    margin: 1rem;
+    word-wrap: break-word;
+}
+
+#main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: #8e8e8e;
+    color: #000;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.person {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    width: 20%;
+    position: relative;
+}
+
+.speechBubble {
+    width: 100%; /* Matches the width of the .person */
+    aspect-ratio: 1 / 1; /* Maintains a square shape or desired ratio */
+    background-image: url(../images/filled-speech-bubble-2.png);
+    background-size: contain; /* Scales the image proportionally */
+    background-repeat: no-repeat; /* Prevents tiling */
+    background-position: center; /* Centers the image */
+    display: flex; /* Center-aligns the text */
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+    /* background-color: hsl(50 33% 25% / 75%); */
+    margin-bottom: -1.5rem;
+}
+
+
+.bubbleText {
+    font-size: 1.5vw; /* Responsive font size tied to viewport width */
+    text-align: center; /* Center-align text */
+}
+
+#intro {
+    display: flex;
+    margin: 1rem;
+    justify-content: center;
+    background-color: #6c1c1c;
+    font-size: 1.25rem;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+#intro p{
+    padding: 1rem;
+    max-width: 400px;
+    width: 40%;
+    text-align: left;
+}
+
+#intro img {
+    padding: 1rem;
+    width: 60%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.button {
+    align-self: center;
+    justify-self: center;
+    width: 65%;
+    margin-top: 1rem;
+    display: none;
+}
+
+.infoParagraph {
+    position: absolute; /* Makes the paragraph overlap */
+    top: 30%; /* Vertically centers it */
+    left: 40%; /* Horizontally centers it */
+    transform: translate(-50%, -50%); /* Centers the paragraph */
+    color: white; 
+    padding: 0.5rem;
+    font-size: 2vw;
+    text-align: center;
+    z-index: 10; /* Ensures it appears above the image */
+    pointer-events: none; /* Prevents blocking clicks on the image */
+    display: none; /* Initially hidden */
+}
+
+@media (max-width: 600px) {
+    .person {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        width: 33%;
+        position: relative;
+        margin-top: 1rem;
+    }
+    .bubbleText {
+        font-size: 2vw; /* Responsive font size tied to viewport width */
+        text-align: center; /* Center-align text */
+    }
+    #intro {
+        display: flex;
+        margin: 1rem;
+        justify-content: center;
+        flex-direction: column-reverse;
+        align-content: center;
+        align-items: center;
+        justify-items: center;
+        padding: 1rem;
+    }
+    #intro p{
+        max-width: 500px;
+        width: 100%;
+    }
+    
+    #intro img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .person {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        width: 50%;
+        position: relative;
+        margin-top: 2rem;
+    }
+    .bubbleText {
+        font-size: 3vw; /* Responsive font size tied to viewport width */
+        text-align: center; /* Center-align text */
+    }
+    .infoParagraph {
+        position: absolute; /* Makes the paragraph overlap */
+        top: 30%; /* Vertically centers it */
+        left: 45%; /* Horizontally centers it */
+        transform: translate(-50%, -50%); /* Centers the paragraph */
+        color: white; 
+        padding: 0.5rem;
+        font-size: 4vw;
+        text-align: center;
+        z-index: 10; /* Ensures it appears above the image */
+        pointer-events: none; /* Prevents blocking clicks on the image */
+        display: none; /* Initially hidden */
+    }
+    h1 {
+        font-family: "Bangers", system-ui;
+        font-size: 3rem;
+        margin: 1rem;
+        word-wrap: break-word;
+    }
+}
+
+@media (max-width: 300px) {
+    .person {
+        display: flex;
+        flex-direction: column;
+        margin-top: 3rem;
+        width: 100%;
+        position: relative;
+    }
+    .bubbleText {
+        font-size: 4vw; /* Responsive font size tied to viewport width */
+        text-align: center; /* Center-align text */
+    }
+    h1 {
+        font-family: "Bangers", system-ui;
+        font-size: 3rem;
+        margin: 1rem;
+        word-wrap: break-word;
+    }
+    .infoParagraph {
+        position: absolute; /* Makes the paragraph overlap */
+        top: 30%; /* Vertically centers it */
+        left: 45%; /* Horizontally centers it */
+        transform: translate(-50%, -50%); /* Centers the paragraph */
+        color: white; 
+        padding: 0.5rem;
+        font-size: 4vw;
+        text-align: center;
+        z-index: 10; /* Ensures it appears above the image */
+        pointer-events: none; /* Prevents blocking clicks on the image */
+        display: none; /* Initially hidden */
+    }
+}
