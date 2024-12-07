@@ -35,7 +35,6 @@ h1 {
 
 #suitMan {
     width: 50%;
-    /* border-style: solid; */
 }
 
 #bubbleImage {
@@ -81,26 +80,21 @@ h1 {
     background-color: #238fce;
 }
 
+.hidden-text{
+    display: none;
+}
+
 /*buttons*/
 
 .arrow{
     width: 5%;
 }
 
-#button{
+#button, #button2{
     margin-left: -1rem;
 }
 
-#button2{
-    margin-left: -1rem;
-}
-
-#button3{
-    transform: rotate(180deg);
-    margin-right: -1rem;
-}
-
-#button4{
+#button3, #button4{
     transform: rotate(180deg);
     margin-right: -1rem;
 }
@@ -116,25 +110,12 @@ h1 {
 
 /*hiding text for JS*/
 
-  #experiencechart{
+  #experiencechart, #ethnicitychart, 
+  #lgbtqchart, #experiencechart2, 
+  #ethnicitychart2,#lgbtqchart2{
     display: none;
   }
-  #ethnicitychart{
-    display:none;
-  }
-  #lgbtqchart{
-    display: none;
-  }
-  #experiencechart2{
-    display: none;
-  }
-  #ethnicitychart2{
-    display:none;
-  }
-  #lgbtqchart2{
-    display: none;
-  }
-
+  
 /* links */
 
 a:link {
@@ -198,27 +179,50 @@ table{
     justify-content: center;
   }
 
-table th{
-    border-style: solid;
-    text-align: center;
-    background-color: #b3b1b1;
-    color: #000;
-    border-style: solid;
-    padding: 1rem;
-    max-width: 200px;
+  table {
+    border-collapse: collapse; /* Remove spacing between table cells */
+    width: 100%; /* Optional: Set table width */
 }
 
-table td{
-    /* border-style: solid; */
-    text-align: center;
-    /* background-color: #a5a4a4; */
-    padding: 0.5rem;
+td {
+    padding: 0; /* Remove padding inside cells */
+    margin: 0; /* Remove margin inside cells */
+    overflow: hidden; /* Ensure no overflow issues */
+    border-style: solid;
+    border-color: #000;
+    border-width: 0.25rem;
+    border-bottom-width: 0.75rem;
 }
+
+td img {
+    object-fit: cover; /* Ensure the image covers the cell without stretching */
+    display: block; /* Remove inline-block spacing */
+}
+
+
+th {
+    background-color: #fff;
+    color: #000;
+    border-style: solid;
+    border-color: #000;
+    border-width: 0.25rem;
+    border-bottom-width: 0.75rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    max-width: 300px;
+    text-align: center;
+    line-height: 2.5rem;
+}
+
 
 @media (max-width: 975px) {
     #bubbleGraf{
         font-size: 1.2rem;
         line-height: 1.6rem;
+    }
+    th{
+        font-size: 1rem;
+        line-height: 1.5rem;
     }
 }
 
@@ -228,46 +232,13 @@ table td{
     line-height: 1.25rem;
     position: absolute;
     top: 40%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    color: #000;
-    width: 75%;
-    margin: 1rem;
-    padding: 2rem;
-   }
-   .infoGraf{
-    column-count: 2;
    }
    h1{
     font-size: 6.5rem;
    }
-   .govcharts{
-    width: 100%;
-    order: 1;
-}
-
-#button4{
-    order: 2;
-    margin-right: 0.5rem;
-    width: 20%;
-}
-#button2{
-    order: 3;
-    margin-left: 0.5rem;
-    width: 20%;
-}
-
-#button{
-    margin-left: 0.5rem;
-    order: 3;
-    width: 20%;
-}
-
-#button3{
-    margin-right: 0.5rem;
-    order: 2;
-    width: 20%;
-}
+   th{
+    font-size: 0.75rem;
+    }
    }
 
 @media (max-width: 500px) {
@@ -306,16 +277,29 @@ table td{
         flex-wrap: wrap;
         padding: 1rem;
     }
-    
-    table{
-        margin: 0 -1rem;
-    }
-    table th{
-        max-width: 100px;
-    }
     .arrow{
-        width: 10%;
+        margin-top: 0.5rem;
     }
+    .govcharts{
+        width: 100%;
+        order: 1;
+    }
+    
+    #button3, #button4{
+        order: 2;
+        margin-right: 0.5rem;
+        width: 20%;
+    }
+
+    #button, #button2{
+        order: 3;
+        margin-left: 0.5rem;
+        width: 20%;
+    }
+    th{
+        max-width: 150px;
+    }
+    
 }
 
 @media (max-width: 320px) {
@@ -335,12 +319,9 @@ table td{
     #bubbleGraf{
         width: 100%;
     }
-    .flagpic{
-        width: 120%;
-    }
-    table th{
-        text-align: left;
-        max-width: 75px;
+    th{
+        max-width: 50px;
+        overflow-wrap: break-word;
         font-size: 0.6rem;
         line-height: 1rem;
     }
