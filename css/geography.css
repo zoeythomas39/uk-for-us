@@ -33,7 +33,7 @@ h1 {
     width: 50%;
 }
 
-#teaGirl {
+#reddress {
     width: 50%;
 }
 
@@ -56,38 +56,53 @@ h1 {
     max-width: 400px;
 }
 
-/* charts */
-
-.govcharts {
-    width: 100%;
-    max-width: 100%;
+#england{
+    background-color: #AB3125;
+}
+#nireland{
+    background-color: #E53B95 ;
+}
+#wales{
+background-color: #DBABCF;
+}
+#scotland{
+    background-color: #7B2881;
 }
 
-.gov{
+ul{
+    list-style: none;
+    /* border-style: solid; */
+    width: fit-content;
+}
+
+ul li{
+    /* border-style: solid; */
+    margin: 1rem;
+    padding: 1rem;
+    width: fit-content;
+}
+
+#map{
     display: flex;
-    align-items: center;
-    align-content: center;
+    padding: 1rem;
+    justify-self: center;
     justify-items: center;
     justify-content: center;
-    margin: 1rem;
+    align-items: center;
+    align-content: center;
+    border-style: solid;
+    align-self: center;
+    max-width: 500px;
+    background-color: #b0a8a8;
 }
 
-#commons {
-    background-color: #d40000;
+#mapcontainer{
+    width: 100%;
+}
+#mapcontainer img{
+    width: 100%;
 }
 
-#lords {
-    background-color: #238fce;
-}
-
-.hidden-text{
-    display: none;
-}
-
-#container3{
-    display: none;
-}
-  
 /* links */
 
 a:link {
@@ -108,63 +123,24 @@ a:focus {
     background-color: #a19e9e;
 }
 
-
-
-  /*info grafs*/
-  .infoGraf{
-    column-count: 2;
-    text-align: left;
-    padding: 1.5rem;
-    background-color: #4d4c4c;
-    margin: 2rem 4rem;
-    max-width: 700px;
-  }
-
-  .infoGrafContainer{
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-  }
-
-  ul{
-    line-height: 2rem;
-    list-style-type: none;
-    margin-left: -2rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    justify-items: center;
-    align-content: center;
-    align-content: center;  
+#maplede{
+    font-size: 2rem;
+    background-color: #d40000;
+    padding: 0.5rem;
 }
-
-  ul li{
-    background-color: #000;
-    margin: 0.5rem;
-    padding: 1rem;
-    width: 20%;
-  }
-
-  #positionList{
-    background-color: #363a62;
-    padding: 1rem;
+#info{
+    max-width: 300px;
     display: flex;
-    justify-content: center;
-    justify-items: center;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
-  }
-
+    justify-self: center;
+    background-color: #555454;
+    padding: 1rem;
+    margin-top: 1.5rem;
+}
 
 @media (max-width: 975px) {
     #bubbleGraf{
         font-size: 1.2rem;
         line-height: 1.6rem;
-    }
-    th{
-        font-size: 1rem;
-        line-height: 1.5rem;
     }
 }
 
@@ -178,19 +154,9 @@ a:focus {
    h1{
     font-size: 6.5rem;
    }
-   th{
-    font-size: 0.75rem;
-    }
    }
 
 @media (max-width: 500px) {
-    ul li{
-        width: 30%;
-    }
-    .infoGraf{
-        column-count: 1;
-        margin: 1rem;
-      }
     body{
         font-size: 0.75rem;
     }
@@ -217,25 +183,16 @@ a:focus {
         font-size: 4rem;
         margin-bottom: 0;
     }
-    .gov{
-        margin: 0;
-        flex-wrap: wrap;
+    
+    #map{
+        display: flex;
         padding: 1rem;
+        width: 90%;
+        justify-self: center;
     }
-    
-    .govcharts{
-        width: 100%;
-        order: 1;
+    #map ul{
+        margin-left: -3rem;
     }
-
-    #container3{
-        display: block;
-    }
-    #container{
-        display: none;
-    }
-   
-    
 }
 
 @media (max-width: 320px) {
@@ -243,7 +200,7 @@ a:focus {
         flex-direction: column;
         margin: 0;
     }
-    #teaGirl{
+    #reddress{
         width: 75%;
     }
     h1{
@@ -255,7 +212,19 @@ a:focus {
     #bubbleGraf{
         width: 100%;
     }
-    ul li{
-        width: 100%;
+    #map{
+        flex-direction: column-reverse;
+        align-items: center;
     }
+    #map ul li{
+        margin: 0.25rem;
+    }
+    #map ul{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #maplede{
+        font-size: 1rem;
+    }
+
 }
