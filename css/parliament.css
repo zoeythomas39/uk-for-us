@@ -1,6 +1,29 @@
 /* general */
 
-body {
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex; 
+    justify-content: center;
+    flex-wrap: wrap;
+   } 
+   nav ul li a {
+    display: block;
+    border: 1px solid;
+    border-radius: .5em;
+    padding: .5em 1em;
+    margin: .5em;
+    text-decoration: none;
+   } 
+   
+   #flagrefs{
+    max-width: 400px;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+   }
+   body {
     text-align: center;
     background-color: #000;
     color: #fff;
@@ -10,7 +33,7 @@ body {
 
 h1 {
     font-family: "Bangers", system-ui;
-    font-size: 10rem;
+    font-size: 9rem;
     margin: 1rem;
     word-wrap: break-word;
     margin-bottom: -3rem;

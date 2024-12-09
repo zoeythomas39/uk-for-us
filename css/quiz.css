@@ -1,4 +1,20 @@
-body {
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex; 
+  justify-content: center;
+  flex-wrap: wrap;
+ } 
+ nav ul li a {
+  display: block;
+  border: 1px solid;
+  border-radius: .5em;
+  padding: .5em 1em;
+  margin: .5em;
+  text-decoration: none;
+ } 
+ body {
   text-align: left;
   background-color: #000;
   color: #fff;
@@ -37,6 +53,9 @@ h1 {
     padding: 20px;
     cursor: pointer;
     margin-bottom: 20px;
+    display: flex;
+    align-self: center;
+    justify-self: center;
   }
   
   button:hover{
@@ -61,6 +80,22 @@ h1 {
     height: 200px;
     margin-top: 40px;}
 
-    a:link{
-      color: #b1b0b0;
-    }
+
+
+    a:link {
+      color: #bbbbbb;
+  }
+  
+  a:visited {
+      color: #a19e9e;
+  }
+  
+  a:hover {
+      color: #000;
+      background-color: #fff;
+  }
+  
+  a:focus {
+      color: #000;
+      background-color: #a19e9e;
+  }

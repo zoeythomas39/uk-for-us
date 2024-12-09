@@ -1,5 +1,21 @@
 /* general */
-
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex; 
+    justify-content: center;
+    flex-wrap: wrap;
+   } 
+   nav ul li a {
+    display: block;
+    border: 1px solid;
+    border-radius: .5em;
+    padding: .5em 1em;
+    margin: .5em;
+    text-decoration: none;
+   } 
+   
 body {
     text-align: center;
     background-color: #000;
@@ -10,10 +26,9 @@ body {
 
 h1 {
     font-family: "Bangers", system-ui;
-    font-size: 10rem;
+    font-size: 9rem;
     margin: 1rem;
     word-wrap: break-word;
-    margin-bottom: -3rem;
     background-color: #d40000;
 }
 
@@ -33,7 +48,7 @@ h1 {
     width: 50%;
 }
 
-#teaGirl {
+#guard {
     width: 50%;
 }
 
@@ -56,37 +71,6 @@ h1 {
     max-width: 400px;
 }
 
-/* charts */
-
-.govcharts {
-    width: 100%;
-    max-width: 100%;
-}
-
-.gov{
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-items: center;
-    justify-content: center;
-    margin: 1rem;
-}
-
-#commons {
-    background-color: #d40000;
-}
-
-#lords {
-    background-color: #238fce;
-}
-
-.hidden-text{
-    display: none;
-}
-
-#container3{
-    display: none;
-}
   
 /* links */
 
@@ -116,45 +100,28 @@ a:focus {
     text-align: left;
     padding: 1.5rem;
     background-color: #4d4c4c;
-    margin: 2rem 4rem;
     max-width: 700px;
+    width: fit-content;
   }
 
-  .infoGrafContainer{
+ .infoGrafContainer{
     display: flex;
-    justify-content: center;
-    justify-items: center;
-  }
-
-  ul{
-    line-height: 2rem;
-    list-style-type: none;
-    margin-left: -2rem;
-    display: flex;
+    align-self: center;
+    justify-self: center;
     flex-wrap: wrap;
-    justify-content: center;
-    justify-items: center;
-    align-content: center;
-    align-content: center;  
+    margin: 1.5rem 4rem;
+ }
+
+ ul{
+    color: #dcdada;
+ }
+
+ #container{
+    display: block;
 }
-
-  ul li{
-    background-color: #000;
-    margin: 0.5rem;
-    padding: 1rem;
-    width: 20%;
-  }
-
-  #positionList{
-    background-color: #363a62;
-    padding: 1rem;
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
-  }
+#container3{
+    display: none;
+}
 
 
 @media (max-width: 975px) {
@@ -176,7 +143,7 @@ a:focus {
     top: 40%;
    }
    h1{
-    font-size: 6.5rem;
+    font-size: 6rem;
    }
    th{
     font-size: 0.75rem;
@@ -184,11 +151,12 @@ a:focus {
    }
 
 @media (max-width: 500px) {
-    ul li{
-        width: 30%;
-    }
+
     .infoGraf{
         column-count: 1;
+        margin: 1rem;
+      }
+      .infoGrafContainer{
         margin: 1rem;
       }
     body{
@@ -214,20 +182,10 @@ a:focus {
         align-items: center;
     }
     h1{
-        font-size: 4rem;
+        font-size: 3.5rem;
         margin-bottom: 0;
     }
-    .gov{
-        margin: 0;
-        flex-wrap: wrap;
-        padding: 1rem;
-    }
-    
-    .govcharts{
-        width: 100%;
-        order: 1;
-    }
-
+   
     #container3{
         display: block;
     }
@@ -243,11 +201,11 @@ a:focus {
         flex-direction: column;
         margin: 0;
     }
-    #teaGirl{
+    #guard{
         width: 75%;
     }
     h1{
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
     #bubble{
         width: 80%;
@@ -255,7 +213,5 @@ a:focus {
     #bubbleGraf{
         width: 100%;
     }
-    ul li{
-        width: 100%;
-    }
+
 }
